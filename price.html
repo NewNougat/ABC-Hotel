@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABC Price Check</title>
+    <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+    <div class="nav">
+    <nav class="navbar">
+        <h1 class="logo">ABC HOTEL</h1>
+    <ul class="nav-link">
+        <li class="link"><a href="home.html">HOME</a></li>
+        <li class="link"><a href="home.html">SERVICES</a></li>
+        <li class="link"><a href="home.html">ABOUT</a></li>
+    </ul>
+    <div class="hamburger">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+    </div>
+    </nav>
+    </div>
+    <div class="whole-container">
+    <div class="container1">
+        <div class="prices">
+        <h1 class="title">ABC HOTEL PRICES</h1>
+        <div class="price-area">
+            <h1 class="placeholder">Floor</h1>
+            <input type="text" name="" id="floor">
+        </div>
+        <div class="price-area">
+            <h1 class="placeholder">Type</h1>
+            <select name="" id="room-type">
+                <option value="Standard">Standard</option>
+                <option value="Superior">Superior</option>
+                <option value="Deluxe">Deluxe</option>
+            </select>
+        </div>
+        <div class="price-area">
+            <h1 class="placeholder">Day(s)</h1>
+            <input type="text" name="" id="days">
+        </div>
+        <div class="price-area">
+            <h1 class="placeholder">Discounts</h1>
+            <select name="" id="discount">
+                <option value="None">None</option>
+                <option value="Member">Member</option>
+                <option value="Birthday Promo">Birthday Promo</option>
+            </select>
+        </div>
+        <div class="check-area">
+        <input type="button" value="CHECK" id="check">
+        <input type="button" value="RESET" id="reset">
+        </div>
+        <div class="result-area">
+            <p id="price"></p>
+            <p id="discounted"></p>
+            <p id="total"></p>
+        </div>
+        </div>
+    </div>
+    <div class="container2">
+        <img src="pics/hotel-g5484a3264_1920.jpg" alt="" class="pic2">
+    </div>
+    </div>
+    <script src="price.js"></script>
+</body>
+</html>

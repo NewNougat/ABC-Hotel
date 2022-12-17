@@ -1,0 +1,229 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /*border: 1px solid red;*/
+    font-family: 'helvetica', sans-serif;
+}
+
+.navbar{
+    width: 70%;
+    height: 170px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.navbar .logo{
+    font-size: 30px;
+    font-weight: bolder;
+    color: white;
+}
+
+.nav-link, a{
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    text-decoration: none;
+    font-style: italic;
+    font-size: 15px;
+    color: white;
+}
+
+body{
+    background-image: url(pics/hotel-g7d930c002_1920.jpg);
+    background-repeat: no-repeat;
+}
+
+.hamburger{
+    display: none;
+    cursor: pointer;
+}
+
+.line{
+    width: 25px;
+    padding: 3px;
+    margin: 1.5px 0;
+    background-color: white;
+}
+
+.whole-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container2{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.prices{
+    background-color: white;
+    padding: 20px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    width: 349px; 
+    height: 348px; 
+    object-fit: cover;
+    object-position: 25% 25%; 
+    box-shadow: rgba(0, 0, 0, 0) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.pic2{
+    width: 349px; 
+    height: 348px; 
+    object-fit: cover;
+    object-position: 25% 25%; 
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.price-area{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.placeholder{
+    font-size: 20px;
+}
+
+input[type=text]{
+    width: 190px;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 1px solid black;
+    border-left: 0;
+}
+
+#room-type, #discount{
+    width: 190px;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 1px solid black;
+    border-left: 0;
+}
+
+.title{
+    font-size: 20px;
+    text-align: center;
+}
+
+.check-area{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+#check{
+    padding: 10px;
+    background-color: black;
+    color: white;
+    border: 1px solid black;
+}
+
+#check:hover{
+    color: black;
+    border: 1px solid black;
+    background-color: white;
+}
+
+#reset{
+    padding: 10px;
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+}
+
+#reset:hover{
+    color: white;
+    border: 1px solid black;
+    background-color: black;
+}
+
+#price, #discounted, #total{
+    font-weight: bold;
+}
+
+.result-area{
+    margin: 20px 0 0 0;
+}
+
+@media screen and (max-width: 700px) {
+    .navbar{
+        width: 90%;
+    }
+
+    .hamburger{
+        display: block;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .hambuger.active .line:nth-child(2){
+        opacity: 0;
+    }
+
+    .hambuger.active .line:nth-child(1){
+        transform: rotateY(45deg) translate(12px);
+    }
+
+    .hambuger.active .line:nth-child(3){
+        transform: rotateY(45deg) translate(-12px);
+    }
+
+    .nav-link{
+        position: absolute;
+        top: 130px;
+        padding: 20px;
+        background-color: rgba(0, 0, 0, 0.567);
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        left: -100%;
+        transition: 0.5s ease;
+    }
+
+    .nav-link.active{
+        left: 0;
+    }
+
+    .whole-container{
+        flex-direction: column-reverse;
+    }
+
+    .pic2{
+        width: 300px; 
+        height: 200px;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 0px;
+        border-top-left-radius: 5px;
+    }
+
+    .prices{
+        width: 300px; 
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 5px;
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 5px;
+    }
+}
+
+@media(min-width: 700px) and (max-width: 1200px){
+    .whole-container{
+        flex-direction: row;
+        height: 70vh;
+    }
+}
+
+@media(min-width: 1200px) and (max-width: 2000px){
+    .whole-container{
+        height: 70vh;
+    }
+}
